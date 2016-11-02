@@ -31,7 +31,7 @@ $fontMain: $fontPoppins;
     margin-right: auto;
 }
 
-@mixin box($width, $height=$width) {
+@mixin box($width, $height) {
     width: $width;
     height: $height;
 }
