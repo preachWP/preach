@@ -8,10 +8,10 @@
 */
 
 @import 'normalize';
-@import 'typography';
-@import 'navigation';
-@import 'sidebar';
-@import 'comments';
+// @import 'typography';
+// @import 'navigation';
+// @import 'sidebar';
+// @import 'comments';
 @import 'footer';
 /*
 ====================================
@@ -25,6 +25,7 @@ img {
 
 body {
 	color: #333;
+	font-size: 16px;
 }
 
 .container {
@@ -41,11 +42,3 @@ body {
 .full {
 	width: 100%;
 }
-
-
-
-
-
-
-
-
