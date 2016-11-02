@@ -1,0 +1,77 @@
+$colorBlue: #45C4FA;
+$colorBlack:#282828;
+$colorGreen: #5AB085;
+$colorWhite: #FDFDFD;
+$colorYellow: #E0FD5B;
+$colorGreyDark: #272727;
+$colorGreyLight: #F5F5F5;
+$colorRed: #FF4F6B;
+$fontPoppins: 'Poppins',
+sans-serif;
+$fontMain: $fontPoppins;
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin center-vertically {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include prefix(transform, translate(-50%, -50%), 'webkit' 'ms');
+}
+
+@mixin center-horizontally {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin box($width, $height=$width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+    @if $orientation=='vertical' {
+        background: -webkit-linear-gradient(top, $start-color, $end-color);
+        background: linear-gradient(to bottom, $start-color, $end-color);
+    }
+    @else if $orientation=='horizontal' {
+        background: -webkit-linear-gradient(left, $start-color, $end-color);
+        background: linear-gradient(to right, $start-color, $end-color);
+    }
+    @else {
+        background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+        background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+}
+
+@mixin yellowButton($fontSize) {
+    font-size: $fontSize;
+    text-transform: uppercase;
+    color: $colorBlack;
+    background-color: $colorYellow;
+    padding: $fontSize $fontSize*2;
+    border-radius: $fontSize*2;
+    border: 1px solid transparent;
+    transition: border .3s ease, background-color .3s ease;
+    &:hover,
+    &:focus {
+        border: 1px solid $colorYellow;
+        background-color: rgba(255, 255, 255, .3);
+    }
+}
+
+@mixin card-shadow {
+    box-shadow: -1px 55px 157px -15px rgba(117, 117, 117, 0.73);
+}
+
+@mixin card-shadow-none {
+    box-shadow: 0 0 0 rgba(117, 117, 117, 0.73);
+}
