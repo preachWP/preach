@@ -13,19 +13,12 @@
                else :
                endif;
             ?>
-            <!-- <li>who</li>
-            <li>what</li>
-            <li>when</li>
-            <li>where</li>
-            <li>why</li> -->
         </ul>
-        <ul class="footer-social">
-            <li><a><i class="fa fa-twitter icon-background1"></i></a></li>
-            <li><a><i class="fa fa-dribbble icon-background2"></i></a></li>
-            <li><a><i class="fa fa-instagram icon-background3"></i></a></li>
-            <li><a><i class="fa fa-facebook icon-background4"></i></a></li>
-            <li><a><i class="fa fa-behance icon-background5"></i></a></li>
-        </ul>
+        <?php wp_nav_menu( array(
+          'container' => false,
+          'theme_location' => 'Social Link List'
+        )); ?>
+
         <ul class="footer-copyright">
             <li>Developed by: Kelvin Li &amp; Clyde Grey</li>
             <li>Design: Preach</li>
