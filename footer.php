@@ -1,6 +1,28 @@
 <footer>
-  <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+  <div class="footer-container">
+    <!-- <p>&copy; Kelvin Li &amp; Clyde Grey <?php echo date('Y'); ?></p -->
+     <div class="footer-wrapper">
+        <h1 class="footer-header">preach</h1>
+        <ul class="footer-links">
+            <li>who</li>
+            <li>what</li>
+            <li>when</li>
+            <li>where</li>
+            <li>why</li>
+        </ul>
+        <ul class="footer-social">
+            <li><a><i class="fa fa-twitter icon-background1"></i></a></li>
+            <li><a><i class="fa fa-dribbble icon-background2"></i></a></li>
+            <li><a><i class="fa fa-instagram icon-background3"></i></a></li>
+            <li><a><i class="fa fa-facebook icon-background4"></i></a></li>
+            <li><a><i class="fa fa-behance icon-background5"></i></a></li>
+        </ul>
+        <ul class="footer-copyright">
+            <li>Developed by: Kelvin Li &amp; Clyde Grey</li>
+            <li>Design: Preach</li>
+            <li>All rights reserved: 2016</li>
+        </ul>
+     </div>
   </div>
 </footer>
 
