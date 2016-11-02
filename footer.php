@@ -4,11 +4,20 @@
      <div class="footer-wrapper">
         <h1 class="footer-header">preach</h1>
         <ul class="footer-links">
-            <li>who</li>
+           <?php
+               if( have_rows('footer_link_list') ):
+                   while ( have_rows('footer_link_list') ) : the_row(); ?>
+                     <li><a href="<?php the_sub_field('footer_link_url') ?>"><?php the_sub_field('footer_link') ?></a></li>
+            <?php
+               endwhile;
+               else :
+               endif;
+            ?>
+            <!-- <li>who</li>
             <li>what</li>
             <li>when</li>
             <li>where</li>
-            <li>why</li>
+            <li>why</li> -->
         </ul>
         <ul class="footer-social">
             <li><a><i class="fa fa-twitter icon-background1"></i></a></li>
