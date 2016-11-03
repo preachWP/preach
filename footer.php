@@ -4,6 +4,7 @@
      <div class="footer-wrapper">
         <h1 class="footer-header">preach</h1>
         <ul class="footer-links">
+
            <?php
                if( have_rows('footer_link_list') ):
                    while ( have_rows('footer_link_list') ) : the_row(); ?>
@@ -13,6 +14,7 @@
                else :
                endif;
             ?>
+
         </ul>
         <?php wp_nav_menu( array(
           'container' => false,
