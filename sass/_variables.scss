@@ -78,3 +78,9 @@ $fontMain: $fontPoppins;
 @mixin card-shadow-none {
     box-shadow: 0 0 0 rgba(117, 117, 117, 0.73);
 }
+
+
+
+.boxshadow {
+    @include card-shadow;
+}
