@@ -19,24 +19,28 @@ footer {
 		font-size: 1.7rem;
 		margin: 0 0 5% 0;
 	}
-	.footer-links, .footer-social {
+	.footer-links {
 		list-style-type: none;
 		width: 35%;
 		margin-bottom: 4%;
 		padding: 0;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		li {
 			flex: 1 0 20%;
 			font-size: 0.7rem;
 		}
 	}
-	.footer-links {
-		color: rgba(170,170,170,1);
-	}
-	.footer-social {
+	ul:nth-of-type(2) {
+		list-style-type: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 4%;
+		padding: 0;
 		width: 25%;
 		li {
 			font-size: 0.8rem;
@@ -47,6 +51,9 @@ footer {
 			line-height: 28px;
 			border-radius: 50%;
 		}
+	}
+	.footer-links {
+		color: rgba(170,170,170,1);
 	}
 	.footer-copyright {
 		list-style-type: none;
@@ -73,18 +80,36 @@ footer {
 	}
 }
 
-.icon-background1 {
-	background: #1DA1F3;
+li:nth-of-type(1) i {
+	background: $colorBlue;
 }
-.icon-background2 {
-	background: #EA4B89;
+li:nth-of-type(2) i {
+	background: $colorRed;
 }
-.icon-background3 {
-	background: #833AB3;
+li:nth-of-type(3) i {
+	background: $colorPurple;
 }
-.icon-background4 {
-	background: #395897;
+li:nth-of-type(4) i {
+	background: $colorFacebook;
 }
-.icon-background5 {
-	background: #1767FF;
+li:nth-of-type(5) i {
+	background: $colorBehance;
 }
+
+
+
+// .footer-wrapper a:nth-of-type(1) i {
+// 	background: $colorBlue;
+// }
+// .footer-wrapper a:nth-of-type(2) {
+// 	background: $colorRed;
+// }
+// .icon-background3 {
+// 	background: $colorPurple;
+// }
+// .icon-background4 {
+// 	background: $colorFacebook;
+// }
+// .icon-background5 {
+// 	background: $colorBehance;
+// }
