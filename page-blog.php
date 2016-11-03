@@ -171,10 +171,10 @@
 </div>
 
 <section class=form-section>
-   <h1><?php the_field('form_title', get_option('page_for_posts')); ?></h1>
+   <?php the_field('blog_form_title'); ?>
    <?php echo do_shortcode( '[contact-form-7 id="44" title="Newsletter"]' ); ?>
    <p>
-      <?php the_field('blog_form_slogan', get_option('page_for_posts')); ?>
+      <?php the_field('blog_form_slogan'); ?>
    </p>
 
 </section>
