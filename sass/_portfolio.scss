@@ -1,0 +1,175 @@
+.main__portfolio {
+	background: linear-gradient($colorRed 58vh, $colorWhite 58vh, $colorWhite);
+	top:0;
+	left:0;
+	text-align:center;
+
+	h2 {
+			text-transform:uppercase;
+			color:$colorWhite;
+			height:60vh;
+			font-size:3.5rem;
+			line-height:60vh;
+		}
+
+.container{ 
+		position:relative;
+		top:-15vh;
+		transform:translate(0, -5%);
+		display:flex;
+		flex-direction:column;
+		
+		
+		.imageBox {
+			display:inline-block;
+			
+			// width:40%;
+			max-width:900px;
+			min-width:300px;
+			margin:70px auto;
+			transition: all .3s ease;
+			animation: cardAnimation  infinite;
+			animation-duration:4s;
+			&:hover{
+				@include card-shadow-none;
+				transform:scale(.95);
+				animation-play-state: paused;
+			}
+			}
+		.imageBox:nth-of-type(2){
+			animation-duration:3.2s;
+		}
+		.imageBox_multiple {
+			margin:70px auto;
+			max-width:900px;
+			min-width:300px;
+			display:flex;
+			justify-content:space-between;
+			flex-wrap:no-wrap;
+			position:relative;
+			div{
+				flex: 1 0 auto;
+				margin-right:15px;
+			&:last-child{
+				margin-right:0;
+			}
+			img {width:100%;}
+			}
+		}
+		}
+
+	
+.link_box{
+	position:relative;
+	background-color:$colorGreyDark;
+	display:inline-block;
+	margin:70px auto 0 auto;
+	padding:1rem 5rem;
+	max-width:900px;
+	color:$colorWhite;
+	img {
+		margin-bottom:.5rem;
+	}
+	h3{
+		text-transform:uppercase;
+		margin:0;
+		padding:0;	
+	}
+	p{
+		font-weight:normal;
+		margin-top:.5rem;
+		color:rgba(255,255,255,.7);
+		font-weight:100;
+	}
+	a{  margin:.5rem 0 1rem 0;
+		display:inline-block;
+		@include yellowButton(1rem);
+		
+	}
+}
+}
+
+
+.link_box:before {
+	content:"team";
+			text-transform:uppercase;
+			font-size:3.5rem;
+			color:$colorGreyLight;
+			position:absolute;
+			bottom:-3.6rem;
+			z-index:-1;
+			left:50%;
+			transform:translate(-50%,0);
+			width:100%;
+
+}
+
+.link_box:after {
+			content:"";
+			width: calc(100% + 30px);
+			height:100%;
+			box-sizing:border-box;
+			border:2px solid $colorYellow;
+			position:absolute;
+			top:15px;
+			left:-15px;
+			z-index:-2;
+			
+
+}
+
+
+
+.imageBox_multiple:before {
+			content:"more projects";
+			text-transform:uppercase;
+			font-size:3.5rem;
+			color:$colorGreyLight;
+			position:absolute;
+			top:-3rem;
+			z-index:-1;
+			left:50%;
+			transform:translate(-50%,0);
+			width:100%;
+
+		}
+
+
+@keyframes cardAnimation {
+
+
+
+
+	0% {
+     transform:translateY(0);
+  }
+	50% {
+    transform:translateY(-8px);
+  }
+
+  100% {
+    transform:translateY(0);
+  }
+
+	// 60%, 80% {
+ //     transform:translateY(-3px);
+ //  }
+}
+
+
+.imageBox_multiple img {transition: all .3s ease;}
+.imageBox_multiple div:hover img {
+						transform: rotateY(180deg);
+						}
+
+
+
+
+
+
+
+
+
+
+
+
