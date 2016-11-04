@@ -41,7 +41,13 @@ get_header();  ?>
 				 ?>
 				
 
-				<div><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>"/></div>
+				<div><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
+
+				<div class="imageBox_multiple-overlay">
+				<a href="">view this project</a>
+
+				</div>
+				</div>
 
 			<?php
                endwhile;

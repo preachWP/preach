@@ -25,7 +25,7 @@ $fontMain: $fontPoppins;
     position: absolute;
     top: 50%;
     left: 50%;
-    @include prefix(transform, translate(-50%, -50%), 'webkit' 'ms');
+    transform: translate(-50%, -50%);
 }
 
 @mixin center-horizontally {
