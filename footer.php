@@ -6,8 +6,8 @@
         <ul class="footer-links">
 
            <?php
-               if( have_rows('footer_link_list') ):
-                   while ( have_rows('footer_link_list') ) : the_row(); ?>
+               if( have_rows('footer_link_list', get_option('page_for_posts')) ):
+                   while ( have_rows('footer_link_list', get_option('page_for_posts')) ) : the_row(); ?>
                      <li><a href="<?php the_sub_field('footer_link_url') ?>"><?php the_sub_field('footer_link') ?></a></li>
             <?php
                endwhile;
