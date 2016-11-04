@@ -2,7 +2,7 @@
    background: $colorBlue;
    text-transform: uppercase;
    .blog-header-wrapper {
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -26,7 +26,7 @@
 }
 
 .blog-grid {
-   max-width: 1200px;
+   max-width: 900px;
    margin: 15px auto;
    display: flex;
    flex-wrap: wrap;
@@ -105,7 +105,7 @@
 }
 
 .blog-grid-links {
-   max-width: 1200px;
+   max-width: 900px;
    margin: 0 auto;
    list-style-type: none;
    padding: 0;
@@ -128,6 +128,9 @@
    flex-wrap: wrap;
    width: 100%;
    color: white;
+   &:hover i {
+      animation: turn 2s linear infinite;
+   }
    .link-image {
       padding: 30px 0;
       flex: 1 0 40%;
@@ -136,6 +139,16 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+      i {
+         background: white;
+         color: black;
+         height: 28px;
+			width: 28px;
+			line-height: 28px;
+			border-radius: 50%;
+         text-align: center;
+         transition: 0.5s;
+      }
    }
    .link-text {
       padding: 30px 0;
@@ -162,10 +175,14 @@
       justify-content: space-between;
       align-items: center;
       padding: 2% 3%;
-      transition: 0.4s;
+      transition: 0.6s;
       p {
          margin: 0;
          text-shadow: 0 0 5px black;
+      }
+      i {
+         color: $colorRed;
+         font-size: 1.2rem;
       }
    }
    &:hover .overlay-bottom {
@@ -196,7 +213,7 @@
       display: flex;
       align-items: center;
       text-transform: uppercase;
-      font-size: 2rem;
+      font-size: 1.8rem;
       padding: 5%;
    }
    .overlay-content {
@@ -204,6 +221,28 @@
       padding: 5% 5%;
       background: rgba(240,240,240,1);
       color: black;
+      position: relative;
+      p {
+         font-size: 0.7rem;
+      }
+      a {
+         text-transform: uppercase;
+         cursor: pointer;
+         position: absolute;
+         top: 0%;
+         right: 3%;
+         padding: 2% 5%;
+         background: transparent;
+         transition: 0.6s;
+         border: 2px solid $colorGreen;
+         color: $colorGreen;
+         transform: translateY(-138%);
+         font-size: 0.8rem;
+         &:hover {
+            background: rgba(90, 176, 133, 0.4);
+            color: white;
+         }
+      }
    }
 }
 
@@ -215,8 +254,9 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   margin-bottom: 100px;
+   margin-bottom: 150px;
    padding: 3%;
+   position: relative;
    h1 {
       font-size: 1.4rem;
       text-transform: uppercase;
@@ -224,6 +264,26 @@
    }
    p {
       color: rgba(100,100,100,1);
+      font-style: italic;
+   }
+   &:before {
+      content: '';
+      height: 100%;
+      position: absolute;
+      width: calc(100% + 40px);
+      top: 20px;
+      border: 3px solid $colorYellow;
+      z-index: -10;
+   }
+   &:after {
+      content: 'newsletter';
+      text-transform: uppercase;
+      position: absolute;
+      font-size: 6.5rem;
+      z-index: -20;
+      bottom: 0;
+      transform: translateY(90%);
+      color: rgba(228, 228, 228, 0.4);
    }
 }
 
@@ -251,6 +311,18 @@
       height: 32px;
    }
 }
+
+@keyframes turn {
+   // 0% {transform: rotate(0deg)};
+   // 100% {transform: rotate(360deg)};
+   from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
 
 ::-webkit-input-placeholder {
   padding-left: 20px;

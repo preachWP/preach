@@ -3,8 +3,8 @@
 
 <div class="blog-header">
    <div class="blog-header-wrapper">
-      <p class="blog-title-tagline">preach stories</p>
-      <h1 class="blog-title">blog</h1>
+      <p class="blog-title-tagline"><?php the_field('hero-tagline', get_option('page_for_posts')); ?></p>
+      <h1 class="blog-title"><?php the_field('blog_main_title', get_option('page_for_posts')) ?></h1>
    </div>
 </div>
 
@@ -25,7 +25,7 @@
                <div class="overlay-top">
                   <?php $date = get_the_date('F jS, Y', $ids[0]) ?>
                   <p><?php echo $date ?></p>
-                  <i class="fa fa-heart"></i>
+                  <i class="fa fa-heart-o"></i>
                </div>
                <div class="overlay-bottom">
                   <div class="overlay-header">
@@ -34,7 +34,9 @@
                   </div>
                   <div class="overlay-content">
                      <?php $blogsum = get_field('post_summary', $ids[0]) ?>
+                     <?php $permalink = get_permalink($ids[0]); ?>
                      <p><?php echo $blogsum ?></p>
+                     <a href="<?php echo $permalink ?>">read more</a>
                   </div>
                </div>
             </div>
@@ -45,7 +47,7 @@
                   <div class="overlay-top">
                      <?php $date = get_the_date('F jS, Y', $ids[1]) ?>
                      <p><?php echo $date ?></p>
-                     <i class="fa fa-heart"></i>
+                     <i class="fa fa-heart-o"></i>
                   </div>
                   <div class="overlay-bottom">
                      <div class="overlay-header">
@@ -55,6 +57,8 @@
                      <div class="overlay-content">
                         <?php $blogsum = get_field('post_summary', $ids[1]) ?>
                         <p><?php echo $blogsum ?></p>
+                        <?php $permalink = get_permalink($ids[1]); ?>
+                        <a href="<?php echo $permalink ?>">read more</a>
                      </div>
                   </div>
                </div>
@@ -64,7 +68,7 @@
                   <div class="overlay-top">
                      <?php $date = get_the_date('F jS, Y', $ids[2]) ?>
                      <p><?php echo $date ?></p>
-                     <i class="fa fa-heart"></i>
+                     <i class="fa fa-heart-o"></i>
                   </div>
                   <div class="overlay-bottom">
                      <div class="overlay-header">
@@ -74,6 +78,8 @@
                      <div class="overlay-content">
                         <?php $blogsum = get_field('post_summary', $ids[2]) ?>
                         <p><?php echo $blogsum ?></p>
+                        <?php $permalink = get_permalink($ids[2]); ?>
+                        <a href="<?php echo $permalink ?>">read more</a>
                      </div>
                   </div>
                </div>
@@ -87,7 +93,7 @@
                   <div class="overlay-top">
                      <?php $date = get_the_date('F jS, Y', $ids[3]) ?>
                      <p><?php echo $date ?></p>
-                     <i class="fa fa-heart"></i>
+                     <i class="fa fa-heart-o"></i>
                   </div>
                   <div class="overlay-bottom">
                      <div class="overlay-header">
@@ -97,6 +103,8 @@
                      <div class="overlay-content">
                         <?php $blogsum = get_field('post_summary', $ids[3]) ?>
                         <p><?php echo $blogsum ?></p>
+                        <?php $permalink = get_permalink($ids[3]); ?>
+                        <a href="<?php echo $permalink ?>">read more</a>
                      </div>
                   </div>
                </div>
@@ -106,7 +114,7 @@
                   <div class="overlay-top">
                      <?php $date = get_the_date('F jS, Y', $ids[4]) ?>
                      <p><?php echo $date ?></p>
-                     <i class="fa fa-heart"></i>
+                     <i class="fa fa-heart-o"></i>
                   </div>
                   <div class="overlay-bottom">
                      <div class="overlay-header">
@@ -116,6 +124,8 @@
                      <div class="overlay-content">
                         <?php $blogsum = get_field('post_summary', $ids[4]) ?>
                         <p><?php echo $blogsum ?></p>
+                        <?php $permalink = get_permalink($ids[4]); ?>
+                        <a href="<?php echo $permalink ?>">read more</a>
                      </div>
                   </div>
                </div>
@@ -126,7 +136,7 @@
                <div class="overlay-top">
                   <?php $date = get_the_date('F jS, Y', $ids[5]) ?>
                   <p><?php echo $date ?></p>
-                  <i class="fa fa-heart"></i>
+                  <i class="fa fa-heart-o"></i>
                </div>
                <div class="overlay-bottom">
                   <div class="overlay-header">
@@ -136,6 +146,8 @@
                   <div class="overlay-content">
                      <?php $blogsum = get_field('post_summary', $ids[5]) ?>
                      <p><?php echo $blogsum ?></p>
+                     <?php $permalink = get_permalink($ids[5]); ?>
+                     <a href="<?php echo $permalink ?>">read more</a>
                   </div>
                </div>
             </div>
@@ -143,34 +155,59 @@
       </div>
    </div>
    <ul class="blog-grid-links">
-      <li>
+      <?php
+          if( have_rows('blog_filter_list', get_option('page_for_posts'))):
+             while ( have_rows('blog_filter_list', get_option('page_for_posts')) ) : the_row(); ?>
+               <li>
+                  <div class="link-whole">
+                     <div class="link-image">
+                        <i class="fa fa-<?php the_sub_field('filter_icon'); ?>"></i>
+                     </div>
+                     <div class="link-text"><?php the_sub_field('filter_link'); ?></div>
+                  </div>
+               </li>
+
+       <?php
+          endwhile;
+          else :
+          endif;
+       ?>
+      <!-- <li>
          <div class="link-whole">
-            <div class="link-image">one</div>
+            <div class="link-image">
+               <i class="fa fa-dribbble"></i>
+            </div>
             <div class="link-text">sports</div>
          </div>
       </li>
       <li>
          <div class="link-whole">
-            <div class="link-image">two</div>
-            <div class="link-text">design</div>
+            <div class="link-image">
+               <i class="fa fa-key"></i>
+            </div>
+            <div class="link-text">sports</div>
          </div>
       </li>
       <li>
          <div class="link-whole">
-            <div class="link-image">three</div>
-            <div class="link-text">fashion</div>
+            <div class="link-image">
+               <i class="fa fa-diamond"></i>
+            </div>
+            <div class="link-text">sports</div>
          </div>
       </li>
       <li>
          <div class="link-whole">
-            <div class="link-image">four</div>
-            <div class="link-text">culture</div>
+            <div class="link-image">
+               <i class="fa fa-glass"></i>
+            </div>
+            <div class="link-text">sports</div>
          </div>
-      </li>
+      </li> -->
    </ul>
 </div>
 
-<section class=form-section>
+<section class="form-section boxshadow">
    <h1><?php the_field('form_title', get_option('page_for_posts')); ?></h1>
    <?php echo do_shortcode( '[contact-form-7 id="44" title="Newsletter"]' ); ?>
    <p>
@@ -178,9 +215,6 @@
    </p>
 
 </section>
-
-
-
 
 
 <?php get_footer(); ?>
