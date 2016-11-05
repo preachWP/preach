@@ -1,0 +1,215 @@
+.main__team{
+			background: linear-gradient($colorBlackTrue 100vh, $colorWhite 100vh, $colorWhite);
+			text-align:center;
+			position:relative;
+			z-index:1;
+
+
+.title__container{
+			height:60vh;
+			top:35vh;
+			z-index:10;
+			position:relative;
+			color:$colorWhite;
+h3 			{margin:0;
+			text-transform:uppercase;
+			line-height:1.7;
+			letter-spacing:3px;
+			}
+h2 			{
+			line-height:1.1;
+			text-transform:uppercase;
+			color:$colorWhite;
+			margin:0;
+			font-size:3.5rem;
+			background:$colorBlackTrue;
+			display:inline-block;
+			padding:0 1rem;
+			position:relative;
+			&:before{
+				content:"";
+				width:450px;
+				height:77vh;
+				display:block;
+				border:1px solid $colorYellow;
+				position:absolute;
+				z-index:-10;
+				top:0px;
+				left:50%;
+				transform:translateX(-50%);
+			}		
+		}
+	}
+.heroBox{
+	background-color:$colorBlack;
+	width:600px;
+	height:350px;
+	margin:0 auto;
+	text-align:center;
+	position:relative;
+	z-index:10;
+	top:0;
+}
+.teamInfo {
+	line-height:1.8;
+	max-width:500px;
+	margin:150px auto 250px auto;	
+}
+
+.designerBox {
+
+	width:100vw;
+	margin-bottom:300px;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:flex-end;
+	.designerBox--flexItem {
+		width:33.333%;
+		display:flex;
+		flex-wrap:wrap;
+		height:300px;
+		
+							}
+	.designerBox--flexItem:nth-of-type(2)>div:nth-of-type(1){
+		height:50px;
+		
+	}
+	.designerBox--flexItem:nth-of-type(2)>div:nth-of-type(2){
+		height:400px;
+		background-color:$colorBlackTrue;
+		position:relative;
+		z-index:10;
+
+
+		img{height:600px;
+			position:absolute;
+			bottom:0; 
+			left:0;
+			width:100%;
+			height:auto;
+			}
+	}
+						}
+.designerBox--flexItem>div{
+	width:100%;
+	&:nth-of-type(1){
+		height:50px;
+		position:relative;
+
+		h4{
+			color:$colorBlackTrue;
+			padding:0;
+			margin:0;
+			right:100px;
+			font-size:1.6rem;
+			text-transform:uppercase;
+			position:absolute;
+			bottom:-.4rem;
+		}
+		h3{
+			color:$colorGreyLight;
+			padding:0;
+			margin:0;
+			font-size:3.5rem;
+			text-transform:uppercase;
+			left:-2rem;
+			position:absolute;
+			bottom:-1.3rem;	
+		}
+	}
+	&:nth-of-type(2){
+	background-color:$colorBlackTrue;
+	height:400px;
+	position:relative;
+	z-index:10;
+	color:$colorWhite;
+	padding:3rem;
+	}
+}
+
+.designerbox__content-left {
+	max-width:300px;
+	float:right;
+}
+.designerbox__content-right {
+	max-width:300px;
+	float:left;
+}
+
+
+
+
+
+.portfolioLink_box{
+	position:relative;
+	background-color:$colorGreyDark;
+	display:inline-block;
+	margin:70px auto 100px auto;
+	padding:1rem 5rem;
+	max-width:900px;
+	color:$colorWhite;
+	// z-index:10;
+
+	
+	
+	img {
+		margin-bottom:.5rem;
+	}
+	h3{
+		text-transform:uppercase;
+		margin:0;
+		padding:0;	
+	}
+	p{
+		font-weight:normal;
+		margin-top:.5rem;
+		color:rgba(255,255,255,.7);
+		font-weight:100;
+	}
+	a{  margin:.5rem 0 1rem 0;
+		display:inline-block;
+		@include yellowButton(1rem);
+		
+	}
+
+}
+
+
+
+.portfolioLink_box:before {
+			content:"portfolio";
+			text-transform:uppercase;
+			font-size:3.5rem;
+			color:$colorGreyLight;
+			position:absolute;
+			top:-3rem;
+			// bottom:0;
+			z-index:-1;
+			left:50%;
+			transform:translate(-50%,0);
+			width:100%;
+
+}
+
+.portfolioLink_box:after {
+			content:"";
+			
+			width: calc(100% + 30px);
+			height:100%;
+			box-sizing:border-box;
+			border:2px solid $colorYellow;
+			position:absolute;
+			// position:relative;
+			top:15px;
+			left:-15px;
+			z-index:-1;
+			
+
+}
+
+.designerImage {
+		max-height:120%;
+}
+
+}
