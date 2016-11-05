@@ -43,7 +43,8 @@
       flex: 1 0 50%;
       width: 100%;
       // background: pink;
-      background: url('http://unsplash.it/600/600/?image=1') center center;
+      background-position: center center;
+      // background: url('http://unsplash.it/600/600/?image=1') center center;
       background-size: cover;
    }
    .blog-grid-left-bottom {
@@ -55,7 +56,7 @@
          flex: 1 0 50%;
          width: 100%;
          // background: pink;
-         background: url('http://unsplash.it/600/600/?image=94') center center;
+         // background: url('http://unsplash.it/600/600/?image=94') center center;
          background-size: cover;
       }
       .blog-grid-left-bottom-right {
@@ -63,7 +64,7 @@
          flex: 1 0 calc(50% - 15px);
          width: 100%;
          // background: pink;
-         background: url('http://unsplash.it/600/600/?image=180') center center;
+         // background: url('http://unsplash.it/600/600/?image=180') center center;
          background-size: cover;
       }
    }
@@ -81,7 +82,7 @@
          flex: 1 0 50%;
          width: 100%;
          // background: pink;
-         background: url('http://unsplash.it/600/600/?image=70') center center;
+         // background: url('http://unsplash.it/600/600/?image=70') center center;
          background-size: cover;
       }
       .blog-grid-right-top-right {
@@ -89,7 +90,7 @@
          flex: 1 0 calc(50% - 15px);
          width: 100%;
          // background: pink;
-         background: url('http://unsplash.it/600/600/?image=90') center center;
+         // background: url('http://unsplash.it/600/600/?image=90') center center;
          background-size: cover;
       }
    }
@@ -99,7 +100,7 @@
       background: orange;
       width: 100%;
       // background: pink;
-      background: url('http://unsplash.it/600/600/?image=50') center center;
+      // background: url('http://unsplash.it/600/600/?image=50') center center;
       background-size: cover;
    }
 }
@@ -176,9 +177,11 @@
       align-items: center;
       padding: 2% 3%;
       transition: 0.6s;
+      background: linear-gradient(rgba(50,50,50,0.8), transparent);
       p {
          margin: 0;
-         text-shadow: 0 0 5px black;
+         font-size: 0.8rem;
+         // text-shadow: 0 0 5px black;
       }
       i {
          color: $colorRed;
@@ -213,7 +216,7 @@
       display: flex;
       align-items: center;
       text-transform: uppercase;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       padding: 5%;
    }
    .overlay-content {
@@ -265,6 +268,7 @@
    p {
       color: rgba(100,100,100,1);
       font-style: italic;
+      font-size: 0.8rem;
    }
    &:before {
       content: '';
@@ -284,6 +288,7 @@
       bottom: 0;
       transform: translateY(90%);
       color: rgba(228, 228, 228, 0.4);
+      font-weight: 700;
    }
 }
 
@@ -296,6 +301,7 @@
          background: transparent;
          border: 2px solid gray;
          padding: 4% 0;
+         font-size: 0.8rem;
          border-radius: 100px;
       }
    }
@@ -303,7 +309,7 @@
       position: absolute;
       transform: translate(-50%, -50%);
       top: 50%;
-      right: -1.5%;
+      right: -2%;
       border-radius: 50%;
       background: $colorYellow;
       border: none;

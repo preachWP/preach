@@ -282,3 +282,12 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+function google_fonts() {
+	$query_args = array(
+		'family' => 'family=Poppins:400,500,700',
+	);
+	wp_register_style( 'google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
+            }
+
+add_action('wp_enqueue_scripts', 'google_fonts');

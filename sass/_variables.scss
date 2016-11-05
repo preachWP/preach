@@ -10,9 +10,10 @@ $colorGreyLight: #F5F5F5;
 $colorFacebook: #395897;
 $colorBehance: #1767FF;
 $colorRed: #FF4F6B;
-$fontPoppins: 'Poppins',
+$fontPoppins: 'Poppins', sans-serif,
 sans-serif;
 $fontMain: $fontPoppins;
+
 
 @mixin clearfix {
   &:after {
@@ -67,8 +68,8 @@ $fontMain: $fontPoppins;
     transition: border .3s ease, background-color .3s ease;
     &:hover,
     &:focus {
-        border: 1px solid $colorYellow;
-        background-color: rgba(255, 255, 255, .3);
+      //   border: 1px solid $colorYellow;
+        background-color: $colorRed;
     }
 }
 
@@ -80,7 +81,9 @@ $fontMain: $fontPoppins;
     box-shadow: 0 0 0 rgba(117, 117, 117, 0.73);
 }
 
-
+.yellowButton {
+   @include yellowButton(1rem);
+}
 
 .boxshadow {
     @include card-shadow;

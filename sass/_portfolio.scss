@@ -12,17 +12,17 @@
 			line-height:60vh;
 		}
 
-.container{ 
+.container{
 		position:relative;
 		top:-15vh;
 		transform:translate(0, -5%);
 		display:flex;
 		flex-direction:column;
-		
-		
+
+
 		.imageBox {
 			display:inline-block;
-			
+			width: 100%;
 			// width:40%;
 			max-width:900px;
 			min-width:300px;
@@ -30,6 +30,9 @@
 			transition: all .3s ease;
 			animation: cardAnimation  infinite;
 			animation-duration:4s;
+			img {
+				width: 100%;
+			}
 			&:hover{
 				@include card-shadow-none;
 				transform:scale(.95);
@@ -41,6 +44,7 @@
 		}
 		.imageBox_multiple {
 			margin:70px auto;
+			width: 100%;
 			max-width:900px;
 			min-width:300px;
 			display:flex;
@@ -58,14 +62,15 @@
 		}
 		}
 
-	
+
 .link_box{
 	position:relative;
 	background-color:$colorGreyDark;
 	display:inline-block;
 	margin:70px auto 0 auto;
 	padding:1rem 5rem;
-	max-width:900px;
+	width: 100%;
+	max-width:750px;
 	color:$colorWhite;
 	img {
 		margin-bottom:.5rem;
@@ -73,7 +78,7 @@
 	h3{
 		text-transform:uppercase;
 		margin:0;
-		padding:0;	
+		padding:0;
 	}
 	p{
 		font-weight:normal;
@@ -83,8 +88,8 @@
 	}
 	a{  margin:.5rem 0 1rem 0;
 		display:inline-block;
-		@include yellowButton(1rem);
-		
+		@include yellowButton(0.85rem);
+
 	}
 }
 
@@ -94,10 +99,11 @@
 .link_box:before {
 	content:"team";
 			text-transform:uppercase;
-			font-size:3.5rem;
+			font-size:5.5rem;
+			font-weight: 700;
 			color:$colorGreyLight;
 			position:absolute;
-			bottom:-3.6rem;
+			bottom:-6.8rem;
 			z-index:-1;
 			left:50%;
 			transform:translate(-50%,0);
@@ -115,7 +121,7 @@
 			top:15px;
 			left:-15px;
 			z-index:-2;
-			
+
 
 }
 
@@ -127,7 +133,7 @@
 			font-size:3.5rem;
 			color:$colorGreyLight;
 			position:absolute;
-			top:-3rem;
+			top:-4rem;
 			z-index:-1;
 			left:50%;
 			transform:translate(-50%,0);
@@ -156,7 +162,7 @@
 .imageBox_multiple>div{ transition:all 10.5s;
 						position:relative;
 						// overflow:hidden;
-						
+
 						}
 
 .imageBox_multiple-overlay{		backface-visibility:hidden;
@@ -219,7 +225,7 @@
 
 						a{
 								opacity:1;
-								
+
 							    top: 50%;
 							    left: 50%;
 							    transform: translate(-50%, -50%) rotate(0deg);
@@ -232,13 +238,3 @@
 						}
 
 }
-
-
-
-
-
-
-
-
-
-
