@@ -41,7 +41,7 @@ get_header();  ?>
 			<?php $image = get_field('designer_image');
 				$imagesrc = $image['url'];
 				// echo $image;
-			 ?> 
+			 ?>
 <img class="designerImage" src="<?php  echo $imagesrc  ?>""  alt="">
 		</div>
 		</div>
@@ -59,8 +59,8 @@ get_header();  ?>
 
 
 
-<div class="portfolioLink_box">
-			<img src="<?php the_field('link_box_icon'); ?>" alt="">	
+<div class="portfolioLink_box boxshadow">
+			<img src="<?php the_field('link_box_icon'); ?>" alt="">
 			<h3>portfolio!</h3>
 			<p>view some of our other work</p>
 			<a class="yellow-button" href="<?php the_field('link_box_link') ?>"></a>
@@ -71,13 +71,13 @@ get_header();  ?>
     <?php // Start the loop ?>
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-      
+
       <?php the_content(); ?>
 
 
 		<?php
                if( have_rows('media_box') ):
-                   while ( have_rows('media_box') ) : the_row(); 
+                   while ( have_rows('media_box') ) : the_row();
                	$image = get_sub_field('block_image');
 				 ?>
 				<div class="imageBox boxshadow"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
@@ -91,10 +91,10 @@ get_header();  ?>
 		<div class="">
 		<?php
                if( have_rows('media_box_thin') ):
-                   while ( have_rows('media_box_thin') ) : the_row(); 
+                   while ( have_rows('media_box_thin') ) : the_row();
                	$image = get_sub_field('media_thin');
 				 ?>
-				
+
 
 				<div><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>"/>
 
@@ -109,16 +109,16 @@ get_header();  ?>
                else :
                endif;
             ?>
-   
+
    			</div>
-		
-			
+
+
 
 
 
     <?php endwhile; // end the loop?>
 
-  
+
  <!--  </div> /.container -->
 </div> <!-- /.main -->
 
