@@ -20,7 +20,20 @@ get_header();  ?>
 <?php $heroImage = get_field('hero_image');
 				$heroImageSrc = $heroImage['url']; ?>
 
-<img src="<?php echo $heroImageSrc; ?>" alt="">
+
+
+<?php $heroVideo = get_field('hero_video');
+				$heroVideoSrc = $heroVideo['url']; ?>
+<video autoplay loop>
+
+<source src="<?php echo $heroVideoSrc; ?>" type="video/mp4">
+</video>
+<!-- <img src="<?php echo $heroImageSrc; ?>" alt=""> -->
+
+
+
+
+
 </div>
 
 <p class="teamInfo">

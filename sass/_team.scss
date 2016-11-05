@@ -50,6 +50,9 @@ h2 			{
 	position:relative;
 	z-index:10;
 	top:0;
+	img {
+		height:100%;
+	}
 }
 .teamInfo {
 	line-height:1.8;
@@ -215,5 +218,8 @@ h2 			{
 .designerImage {
 		height: 120%;
 }
+
+
+video {width:100%;}
 
 }
