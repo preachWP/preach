@@ -20,7 +20,7 @@
 <div class="blog-translate-container">
    <div class="blog-grid">
       <div class="blog-grid-left">
-         <div class="blog-grid-left-top">
+         <div class="blog-grid-left-top" style="background: url('<?php echo get_field('blog_thumnail', $ids[0])['url']; ?>'); background-size: cover;">
             <div class="overlay">
                <div class="overlay-top">
                   <?php $date = get_the_date('F jS, Y', $ids[0]) ?>
@@ -42,7 +42,7 @@
             </div>
          </div>
          <div class="blog-grid-left-bottom">
-            <div class="blog-grid-left-bottom-left">
+            <div class="blog-grid-left-bottom-left" style="background: url('<?php echo get_field('blog_thumnail', $ids[1])['url']; ?>'); background-size: cover;">
                <div class="overlay">
                   <div class="overlay-top">
                      <?php $date = get_the_date('F jS, Y', $ids[1]) ?>
@@ -63,7 +63,7 @@
                   </div>
                </div>
             </div>
-            <div class="blog-grid-left-bottom-right">
+            <div class="blog-grid-left-bottom-right" style="background: url('<?php echo get_field('blog_thumnail', $ids[2])['url']; ?>'); background-size: cover;">
                <div class="overlay">
                   <div class="overlay-top">
                      <?php $date = get_the_date('F jS, Y', $ids[2]) ?>
@@ -88,7 +88,7 @@
       </div>
       <div class="blog-grid-right">
          <div class="blog-grid-right-top">
-            <div class="blog-grid-right-top-left">
+            <div class="blog-grid-right-top-left" style="background: url('<?php echo get_field('blog_thumnail', $ids[3])['url']; ?>'); background-size: cover;">
                <div class="overlay">
                   <div class="overlay-top">
                      <?php $date = get_the_date('F jS, Y', $ids[3]) ?>
@@ -109,7 +109,7 @@
                   </div>
                </div>
             </div>
-            <div class="blog-grid-right-top-right">
+            <div class="blog-grid-right-top-right" style="background: url('<?php echo get_field('blog_thumnail', $ids[4])['url']; ?>'); background-size: cover;">
                <div class="overlay">
                   <div class="overlay-top">
                      <?php $date = get_the_date('F jS, Y', $ids[4]) ?>
@@ -131,7 +131,7 @@
                </div>
             </div>
          </div>
-         <div class="blog-grid-right-bottom">
+         <div class="blog-grid-right-bottom" style="background: url('<?php echo get_field('blog_thumnail', $ids[5])['url']; ?>'); background-size: cover;">
             <div class="overlay">
                <div class="overlay-top">
                   <?php $date = get_the_date('F jS, Y', $ids[5]) ?>

@@ -16,6 +16,8 @@
 @import 'portfolio';
 @import 'footer';
 @import 'blog';
+@import 'header';
+@import 'singlePost';
 /*
 ====================================
 Default Styling
@@ -30,6 +32,7 @@ body {
 	color: #333;
 	font-size: 16px;
 	font-family: $fontMain;
+	font-weight: 400;
 }
 
 .container {
