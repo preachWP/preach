@@ -17,10 +17,14 @@ get_header();  ?>
 
 
 <div class="heroBox">
+<?php $heroImage = get_field('hero_image');
+				$heroImageSrc = $heroImage['url']; ?>
+
+<img src="<?php echo $heroImageSrc; ?>" alt="">
 </div>
 
 <p class="teamInfo">
-	Some sample test goes in here.  Why not put some stuff in here. Some sample test goes in here.  Why not put some stuff in here. Some sample test goes in here.  Why not put some stuff in here. Some sample test goes in here.  Why not put some stuff in here.  Why not put some stuff in here. Some sample test goes in here.  Why not put some stuff in here. Some sample test goes in here.  Why not put some stuff in here.
+	<?php the_field('team_paragraph'); ?>
 
 </p>
 
@@ -31,7 +35,7 @@ get_header();  ?>
 			<div><h4>zack jackson</h4></div>
 			<div>
 			<div class="designerbox__content-left">
-			Why not put some stuff in here. Some sample test goes in here.  Why not put some stuff in here. Some sample test goes in here.  Why not put some stuff in here.  Why not put some stuff in here. Some sample test goes in here.  Why not put some </div>
+			<?php the_field('designer_paragraph'); ?> </div>
 			</div>
 		</div>
 
@@ -59,11 +63,12 @@ get_header();  ?>
 
 
 
+
 <div class="portfolioLink_box boxshadow">
 			<img src="<?php the_field('link_box_icon'); ?>" alt="">
-			<h3>portfolio!</h3>
+			<h3>portfolio</h3>
 			<p>view some of our other work</p>
-			<a class="yellow-button" href="<?php the_field('link_box_link') ?>"></a>
+			<a class="yellow-button" href="<?php the_field('link_box_link') ?>">VIEW</a>
 		</div>
 
 
