@@ -1,0 +1,240 @@
+.main__portfolio {
+	background: linear-gradient($colorRed 58vh, $colorWhite 58vh, $colorWhite);
+	top:0;
+	left:0;
+	text-align:center;
+
+	h2 {
+			text-transform:uppercase;
+			color:$colorWhite;
+			height:60vh;
+			font-size:3.5rem;
+			line-height:60vh;
+		}
+
+.container{
+		position:relative;
+		top:-15vh;
+		transform:translate(0, -5%);
+		display:flex;
+		flex-direction:column;
+
+
+		.imageBox {
+			display:inline-block;
+			width: 100%;
+			// width:40%;
+			max-width:900px;
+			min-width:300px;
+			margin:70px auto;
+			transition: all .3s ease;
+			animation: cardAnimation  infinite;
+			animation-duration:4s;
+			img {
+				width: 100%;
+			}
+			&:hover{
+				@include card-shadow-none;
+				transform:scale(.95);
+				animation-play-state: paused;
+			}
+			}
+		.imageBox:nth-of-type(2){
+			animation-duration:3.2s;
+		}
+		.imageBox_multiple {
+			margin:70px auto;
+			width: 100%;
+			max-width:900px;
+			min-width:300px;
+			display:flex;
+			justify-content:space-between;
+			flex-wrap:no-wrap;
+			position:relative;
+			div{
+				flex: 1 0 auto;
+				margin-right:15px;
+			&:last-child{
+				margin-right:0;
+			}
+			img {width:100%;}
+			}
+		}
+		}
+
+
+.link_box{
+	position:relative;
+	background-color:$colorGreyDark;
+	display:inline-block;
+	margin:70px auto 0 auto;
+	padding:1rem 5rem;
+	width: 100%;
+	max-width:750px;
+	color:$colorWhite;
+	img {
+		margin-bottom:.5rem;
+	}
+	h3{
+		text-transform:uppercase;
+		margin:0;
+		padding:0;
+	}
+	p{
+		font-weight:normal;
+		margin-top:.5rem;
+		color:rgba(255,255,255,.7);
+		font-weight:100;
+	}
+	a{  margin:.5rem 0 1rem 0;
+		display:inline-block;
+		@include yellowButton(0.85rem);
+
+	}
+}
+
+}
+
+
+.link_box:before {
+	content:"team";
+			text-transform:uppercase;
+			font-size:5.5rem;
+			font-weight: 700;
+			color:$colorGreyLight;
+			position:absolute;
+			bottom:-6.8rem;
+			z-index:-1;
+			left:50%;
+			transform:translate(-50%,0);
+			width:100%;
+
+}
+
+.link_box:after {
+			content:"";
+			width: calc(100% + 30px);
+			height:100%;
+			box-sizing:border-box;
+			border:2px solid $colorYellow;
+			position:absolute;
+			top:15px;
+			left:-15px;
+			z-index:-2;
+
+
+}
+
+
+
+.imageBox_multiple:before {
+			content:"more projects";
+			text-transform:uppercase;
+			font-size:3.5rem;
+			color:$colorGreyLight;
+			position:absolute;
+			top:-4rem;
+			z-index:-1;
+			left:50%;
+			transform:translate(-50%,0);
+			width:100%;
+
+		}
+
+
+@keyframes cardAnimation {
+	0% {
+     transform:translateY(0);
+  }
+	50% {
+    transform:translateY(-8px);
+  }
+
+  100% {
+    transform:translateY(0);
+  }
+}
+
+
+
+
+
+.imageBox_multiple>div{ transition:all 10.5s;
+						position:relative;
+						// overflow:hidden;
+
+						}
+
+.imageBox_multiple-overlay{		backface-visibility:hidden;
+								transform:rotateY(180deg);
+								top:0;
+								left:0;
+								position:absolute;
+								width:100%;
+								height:100%;
+								background-color:$colorRed;
+								transition: all .5s ease;
+								transition-delay:.4s;
+								overflow:hidden;
+							a{
+								opacity:0;
+								position: absolute;
+							    top: -60%;
+							    left: -40%;
+							    transform: translate(-50%, -50%) rotate(-300deg);
+							    transition:all .5s;
+							    transition-delay:.2s;
+							    text-transform:uppercase;
+							    color:$colorWhite;
+							    font-size:.9rem;
+								&:after{
+									content:"";
+									width:80%;
+									background-color:$colorWhite;
+									height:1px;
+									display:block;
+									margin:.4rem auto;
+									transition:all .5s;
+							    	transition-delay:.2s;
+							    	opacity:0;
+									transform:translateY(900px) translateX(100px) rotate(600deg);
+
+
+								}
+
+								}
+							}
+
+.imageBox_multiple img {transition: all .5s ease;
+						transition-delay:.4s;
+
+						}
+.imageBox_multiple div:hover img {
+						backface-visibility:hidden;
+						transform: rotateY(180deg);
+						transition-delay:.1s;
+
+						}
+
+.imageBox_multiple div:hover .imageBox_multiple-overlay{
+						transform:rotateY(0deg) scale(1.04);
+						transition-delay:.1s;
+						@include card-shadow;
+						// animation: cardAnimation-thin  infinite;
+			// animation-duration:4s;
+
+						a{
+								opacity:1;
+
+							    top: 50%;
+							    left: 50%;
+							    transform: translate(-50%, -50%) rotate(0deg);
+
+
+						&:after{
+							opacity:1;
+									transform:translateY(0) translateX(0) rotate(0deg);
+							}
+						}
+
+}
