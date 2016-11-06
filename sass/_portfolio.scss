@@ -247,13 +247,13 @@ body, html {overflow-X:hidden;}
 			div{
 				flex: 0 0 60%;
 			&:last-child{
-			
+
 			}
 			}
 		}
-		
+
 .imageBox_multiple:before {
-		
+
 			top:113px;
 			left:50%;
 			transform:translate(-50%,0);
@@ -263,18 +263,8 @@ body, html {overflow-X:hidden;}
 		color: darken($colorGreyLight, 3%);
 }
 
-.container .imageBox_multiple>div{ 		
+.container .imageBox_multiple>div{
 						margin:20px 0;
 						}
 		}
 }
-
-
-
-
-
-
-
-
-
-

@@ -66,10 +66,11 @@ h2 			{
 	justify-content:center;
 	align-items:flex-end;
 	.designerBox--flexItem {
-					width:33.333%;
-					display:flex;
-					flex-wrap:wrap;
-					height:300px;
+		width:33.333%;
+		display:flex;
+		flex-wrap:wrap;
+		height:300px;
+
 							}
 	.designerBox--flexItem:nth-of-type(2)>div:nth-of-type(1){
 		height:50px;
@@ -80,6 +81,8 @@ h2 			{
 		background-color:$colorBlackTrue;
 		position:relative;
 		z-index:10;
+
+
 		img{height:600px;
 			position:absolute;
 			bottom:0;
@@ -94,6 +97,7 @@ h2 			{
 	&:nth-of-type(1){
 		height:50px;
 		position:relative;
+
 		h4{
 			color:$colorBlackTrue;
 			padding:0;
@@ -134,6 +138,10 @@ h2 			{
 	float:left;
 }
 
+
+
+
+
 .portfolioLink_box{
 	position:relative;
 	background-color:$colorGreyDark;
@@ -163,7 +171,10 @@ h2 			{
 		@include yellowButton(1rem);
 		padding:.2rem 1rem;
 	}
+
 }
+
+
 
 .portfolioLink_box:before {
 			content:"portfolio";
@@ -172,15 +183,19 @@ h2 			{
 			color:$colorGreyLight;
 			position:absolute;
 			top:-3.6rem;
+			// bottom:0;
 			z-index:-1;
 			left:0;
 			transform:translate(0, 0);
 			width:100%;
 			font-weight: 700;
+
+
 }
 
 .portfolioLink_box:after {
 			content:"";
+
 			width: calc(100% + 30px);
 			height:100%;
 			box-sizing:border-box;
@@ -202,7 +217,7 @@ h2 			{
 			{
 			width:80vw;
 			height:65vh;
-			}	
+			}
 .designerBox {
 	margin-bottom:100px;
 	.designerBox--flexItem {
@@ -220,7 +235,7 @@ h2 			{
 	&:nth-of-type(1){
 				h4 {font-size:1.54rem;
 					bottom:-1.45rem;
-					}	
+					}
 				}
 			}
 		}

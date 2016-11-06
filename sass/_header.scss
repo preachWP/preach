@@ -10,6 +10,7 @@
    width: 100%;
    top: 0;
    color: white;
+   z-index: 10;
 }
 
 .header-nav-logo {
@@ -58,4 +59,10 @@
    @include yellowButton(0.8rem);
    padding: 5px 10px;
    pointer-events: none;
+}
+
+@media (max-width: 750px) {
+   .header-nav {
+      flex-direction: column;
+   }
 }

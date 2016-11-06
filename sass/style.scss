@@ -19,6 +19,7 @@
 @import 'header';
 @import 'singlePost';
 @import 'team';
+@import 'front';
 /*
 ====================================
 Default Styling
@@ -49,4 +50,8 @@ body {
 
 .full {
 	width: 100%;
+}
+
+.overflow {
+	overflow: hidden;
 }

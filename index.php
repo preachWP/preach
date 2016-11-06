@@ -172,41 +172,8 @@
           else :
           endif;
        ?>
-      <!-- <li>
-         <div class="link-whole">
-            <div class="link-image">
-               <i class="fa fa-dribbble"></i>
-            </div>
-            <div class="link-text">sports</div>
-         </div>
-      </li>
-      <li>
-         <div class="link-whole">
-            <div class="link-image">
-               <i class="fa fa-key"></i>
-            </div>
-            <div class="link-text">sports</div>
-         </div>
-      </li>
-      <li>
-         <div class="link-whole">
-            <div class="link-image">
-               <i class="fa fa-diamond"></i>
-            </div>
-            <div class="link-text">sports</div>
-         </div>
-      </li>
-      <li>
-         <div class="link-whole">
-            <div class="link-image">
-               <i class="fa fa-glass"></i>
-            </div>
-            <div class="link-text">sports</div>
-         </div>
-      </li> -->
    </ul>
 </div>
-
 <section class="form-section boxshadow">
    <h1><?php the_field('form_title', get_option('page_for_posts')); ?></h1>
    <?php echo do_shortcode( '[contact-form-7 id="44" title="Newsletter"]' ); ?>
@@ -215,6 +182,5 @@
    </p>
 
 </section>
-
 
 <?php get_footer(); ?>
