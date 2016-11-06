@@ -1,85 +1,85 @@
 <?php /* Template Name: CustomBlog */ ?>
 <?php get_header(); ?>
-   <div class="blog-header">
-      <div class="blog-header-wrapper">
-         <p class="blog-title-tagline"><?php the_field('hero-tagline', get_option('page_for_posts')); ?></p>
-         <h1 class="blog-title"><?php the_field('blog_main_title', get_option('page_for_posts')) ?></h1>
-      </div>
+
+<div class="blog-header">
+   <div class="blog-header-wrapper">
+      <p class="blog-title-tagline"><?php the_field('hero-tagline', get_option('page_for_posts')); ?></p>
+      <h1 class="blog-title"><?php the_field('blog_main_title', get_option('page_for_posts')) ?></h1>
    </div>
+</div>
 
-   <?php
-      $ids = array();
-      if ( have_posts() ) :
-          while ( have_posts() ) : the_post();
-             array_push( $ids, get_the_ID() );
-          endwhile;
-      endif;
-   ?>
+<?php
+   $ids = array();
+   if ( have_posts() ) :
+       while ( have_posts() ) : the_post();
+          array_push( $ids, get_the_ID() );
+       endwhile;
+   endif;
+?>
 
-   <div class="blog-translate-container">
-      <div class="blog-grid">
-         <div class="blog-grid-left">
-            <div class="blog-grid-left-top" style="background: url('<?php echo get_field('blog_thumnail', $ids[0])['url']; ?>'); background-size: cover;">
+<div class="blog-translate-container">
+   <div class="blog-grid">
+      <div class="blog-grid-left">
+         <div class="blog-grid-left-top" style="background: url('<?php echo get_field('blog_thumnail', $ids[0])['url']; ?>'); background-size: cover;">
+            <div class="overlay">
+               <div class="overlay-top">
+                  <?php $date = get_the_date('F jS, Y', $ids[0]) ?>
+                  <p><?php echo $date ?></p>
+                  <i class="fa fa-heart-o"></i>
+               </div>
+               <div class="overlay-bottom">
+                  <div class="overlay-header">
+                     <?php $headline = get_field('hero-tagline', $ids[0]) ?>
+                     <p><?php echo $headline ?></p>
+                  </div>
+                  <div class="overlay-content">
+                     <?php $blogsum = get_field('post_summary', $ids[0]) ?>
+                     <?php $permalink = get_permalink($ids[0]); ?>
+                     <p><?php echo $blogsum ?></p>
+                     <a href="<?php echo $permalink ?>">read more</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="blog-grid-left-bottom">
+            <div class="blog-grid-left-bottom-left" style="background: url('<?php echo get_field('blog_thumnail', $ids[1])['url']; ?>'); background-size: cover;">
                <div class="overlay">
                   <div class="overlay-top">
-                     <?php $date = get_the_date('F jS, Y', $ids[0]) ?>
+                     <?php $date = get_the_date('F jS, Y', $ids[1]) ?>
                      <p><?php echo $date ?></p>
                      <i class="fa fa-heart-o"></i>
                   </div>
                   <div class="overlay-bottom">
                      <div class="overlay-header">
-                        <?php $headline = get_field('hero-tagline', $ids[0]) ?>
+                        <?php $headline = get_field('hero-tagline', $ids[1]) ?>
                         <p><?php echo $headline ?></p>
                      </div>
                      <div class="overlay-content">
-                        <?php $blogsum = get_field('post_summary', $ids[0]) ?>
-                        <?php $permalink = get_permalink($ids[0]); ?>
+                        <?php $blogsum = get_field('post_summary', $ids[1]) ?>
                         <p><?php echo $blogsum ?></p>
+                        <?php $permalink = get_permalink($ids[1]); ?>
                         <a href="<?php echo $permalink ?>">read more</a>
                      </div>
                   </div>
                </div>
             </div>
-            <div class="blog-grid-left-bottom">
-               <div class="blog-grid-left-bottom-left" style="background: url('<?php echo get_field('blog_thumnail', $ids[1])['url']; ?>'); background-size: cover;">
-                  <div class="overlay">
-                     <div class="overlay-top">
-                        <?php $date = get_the_date('F jS, Y', $ids[1]) ?>
-                        <p><?php echo $date ?></p>
-                        <i class="fa fa-heart-o"></i>
-                     </div>
-                     <div class="overlay-bottom">
-                        <div class="overlay-header">
-                           <?php $headline = get_field('hero-tagline', $ids[1]) ?>
-                           <p><?php echo $headline ?></p>
-                        </div>
-                        <div class="overlay-content">
-                           <?php $blogsum = get_field('post_summary', $ids[1]) ?>
-                           <p><?php echo $blogsum ?></p>
-                           <?php $permalink = get_permalink($ids[1]); ?>
-                           <a href="<?php echo $permalink ?>">read more</a>
-                        </div>
-                     </div>
+            <div class="blog-grid-left-bottom-right" style="background: url('<?php echo get_field('blog_thumnail', $ids[2])['url']; ?>'); background-size: cover;">
+               <div class="overlay">
+                  <div class="overlay-top">
+                     <?php $date = get_the_date('F jS, Y', $ids[2]) ?>
+                     <p><?php echo $date ?></p>
+                     <i class="fa fa-heart-o"></i>
                   </div>
-               </div>
-               <div class="blog-grid-left-bottom-right" style="background: url('<?php echo get_field('blog_thumnail', $ids[2])['url']; ?>'); background-size: cover;">
-                  <div class="overlay">
-                     <div class="overlay-top">
-                        <?php $date = get_the_date('F jS, Y', $ids[2]) ?>
-                        <p><?php echo $date ?></p>
-                        <i class="fa fa-heart-o"></i>
+                  <div class="overlay-bottom">
+                     <div class="overlay-header">
+                        <?php $headline = get_field('hero-tagline', $ids[2]) ?>
+                        <p><?php echo $headline ?></p>
                      </div>
-                     <div class="overlay-bottom">
-                        <div class="overlay-header">
-                           <?php $headline = get_field('hero-tagline', $ids[2]) ?>
-                           <p><?php echo $headline ?></p>
-                        </div>
-                        <div class="overlay-content">
-                           <?php $blogsum = get_field('post_summary', $ids[2]) ?>
-                           <p><?php echo $blogsum ?></p>
-                           <?php $permalink = get_permalink($ids[2]); ?>
-                           <a href="<?php echo $permalink ?>">read more</a>
-                        </div>
+                     <div class="overlay-content">
+                        <?php $blogsum = get_field('post_summary', $ids[2]) ?>
+                        <p><?php echo $blogsum ?></p>
+                        <?php $permalink = get_permalink($ids[2]); ?>
+                        <a href="<?php echo $permalink ?>">read more</a>
                      </div>
                   </div>
                </div>

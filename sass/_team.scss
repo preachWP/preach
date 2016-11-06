@@ -3,8 +3,8 @@
 			text-align:center;
 			position:relative;
 			z-index:1;
-
-
+			max-width:100vw;
+			overflow-X:hidden;
 .title__container{
 			height:60vh;
 			top:35vh;
@@ -41,17 +41,16 @@ h2 			{
 		}
 	}
 .heroBox{
-	background-color:$colorBlack;
 	width:100%;
-	height:60vh;
-	max-width: 600px;
+	max-width: 800px;
 	margin:0 auto;
+	padding:0 5%;
 	text-align:center;
 	position:relative;
 	z-index:10;
 	top:0;
 	img {
-		height: 100%;
+		width:100%;
 	}
 }
 .teamInfo {
@@ -59,9 +58,7 @@ h2 			{
 	max-width:500px;
 	margin:150px auto 250px auto;
 }
-
 .designerBox {
-
 	width:100vw;
 	margin-bottom:300px;
 	display:flex;
@@ -105,11 +102,11 @@ h2 			{
 			color:$colorBlackTrue;
 			padding:0;
 			margin:0;
-			right:100px;
+			text-align:right;
 			font-size:1.6rem;
 			text-transform:uppercase;
-			position:absolute;
-			bottom:-.9rem;
+			position:relative;
+			bottom:-1.4rem;
 		}
 		h3{
 			color:$colorGreyLight;
@@ -149,15 +146,12 @@ h2 			{
 	position:relative;
 	background-color:$colorGreyDark;
 	display:inline-block;
-	margin:70px auto 100px auto;
+	text-align:center;
+	margin:70px 5% 100px 5%;
 	padding:1rem 5rem;
-	width: 100%;
+	width: 90%;
 	max-width:750px;
 	color:$colorWhite;
-	// z-index:10;
-
-
-
 	img {
 		margin-bottom:.5rem;
 	}
@@ -207,16 +201,42 @@ h2 			{
 			box-sizing:border-box;
 			border:2px solid $colorYellow;
 			position:absolute;
-			// position:relative;
 			top:15px;
 			left:-15px;
 			z-index:-1;
-
-
 }
-
 .designerImage {
 		height: 120%;
 }
 
 }
+
+@media only screen and (max-width : 755px){
+.main__team{
+.title__container h2:before
+			{
+			width:80vw;
+			height:65vh;
+			}
+.designerBox {
+	margin-bottom:100px;
+	.designerBox--flexItem {
+		flex: 1 1 50%;
+		height:auto;
+							}
+	.designerBox--flexItem:last-of-type {
+		display:none;
+	}
+	.designerBox--flexItem:nth-of-type(2)>div:nth-of-type(1){
+		height:50px;
+	}
+}
+.designerBox--flexItem>div {
+	&:nth-of-type(1){
+				h4 {font-size:1.54rem;
+					bottom:-1.45rem;
+					}
+				}
+			}
+		}
+	}
