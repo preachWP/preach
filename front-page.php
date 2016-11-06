@@ -39,5 +39,12 @@
       </div>
    </div>
 </section>
+<section class="paragraph">
+   <p><?php the_field('home_paragraph'); ?></p>
+</section>
+<section class="home-video">
+   <?php $video = get_field('home_video')['url']; ?>
+   <video class="boxshadow" src="<?php echo $video; ?>" autoplay loop></video>
+</section>
 
 <?php get_footer(); ?>
