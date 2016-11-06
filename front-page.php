@@ -2,9 +2,9 @@
 
 <section class="front-hero">
    <ul class="front-hero-left">
-      <li class="hero-active"><?php the_field('nav_one'); ?></li>
-      <li><?php the_field('nav_two'); ?></li>
-      <li><?php the_field('nav_three'); ?></li>
+      <li class="hero-active"><a><i class="fa fa-paint-brush hero-icon"></i></a><?php the_field('nav_one'); ?></li>
+      <li><a><i class="fa fa-trophy hero-icon"></i></a><?php the_field('nav_two'); ?></li>
+      <li><a><i class="fa fa-users hero-icon"></i></a><?php the_field('nav_three'); ?></li>
    </ul>
    <div class="front-hero-right">
       <?php $image = get_field('background_one'); ?>
@@ -35,7 +35,7 @@
                <?php the_field('quote_three'); ?>
             </p>
             <a href=".">view more</a>
-         </div>   
+         </div>
       </div>
    </div>
 </section>

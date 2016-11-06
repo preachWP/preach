@@ -59,8 +59,11 @@
    }
 }
 
-.hero-active {
+.front-hero .front-hero-left .hero-active {
    background: rgba(100,100,100, 1);
+   li a i {
+      background: $colorYellow;
+   }
 }
 
 .hero-overlay-active {
@@ -77,4 +80,10 @@
    justify-content: center;
    flex-direction: column;
    background: rgba(0,0,0,0.4);
+}
+
+@media (max-width: 600px) {
+   .front-hero-left {
+      display: none;
+   }
 }

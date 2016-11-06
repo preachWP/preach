@@ -60,3 +60,9 @@
    padding: 5px 10px;
    pointer-events: none;
 }
+
+@media (max-width: 750px) {
+   .header-nav {
+      flex-direction: column;
+   }
+}

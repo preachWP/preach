@@ -12,6 +12,7 @@
   <?php wp_head(); ?>
 </head>
 
+<div class="overflow"
 
 <body <?php body_class(); ?>>
 
