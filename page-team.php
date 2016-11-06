@@ -24,11 +24,11 @@ get_header();  ?>
 
 <?php $heroVideo = get_field('hero_video');
 				$heroVideoSrc = $heroVideo['url']; ?>
-<video autoplay loop>
+<!-- <video autoplay loop>
 
 <source src="<?php echo $heroVideoSrc; ?>" type="video/mp4">
-</video>
-<!-- <img src="<?php echo $heroImageSrc; ?>" alt=""> -->
+</video> -->
+<img src="<?php echo $heroImageSrc; ?>" alt="">
 
 
 
