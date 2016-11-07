@@ -1,11 +1,14 @@
 .main__team{
-			background: linear-gradient($colorBlackTrue 100vh, $colorWhite 100vh, $colorWhite);
+			background: linear-gradient($colorBlackTrue 0vh, $colorBlackTrue 100vh),linear-gradient($colorWhite 0vh, $colorWhite 100%);
+			background-repeat:no-repeat;
+			background-position: 0 0, 0 100vh;
+			background-size: 100% 100vh, 100% 100%;
 			text-align:center;
 			position:relative;
 			z-index:1;
 			max-width:100vw;
 			overflow-X:hidden;
-.title__container{
+			.title__container{
 			height:60vh;
 			top:35vh;
 			z-index:10;

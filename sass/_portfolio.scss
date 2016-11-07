@@ -1,7 +1,11 @@
 body, html {overflow-X:hidden;}
 
 .main__portfolio {
-	background: linear-gradient($colorRed 58vh, $colorWhite 58vh, $colorWhite);
+	background-image: linear-gradient($colorRed 0vh, $colorRed 58vh), linear-gradient($colorWhite 0vh, $colorWhite 42vh);
+	
+	background-position: 0 0, 0 58vh;
+	background-size: 100% 58vh, 100% 42vh;
+	background-repeat:no-repeat;
 	top:0;
 	left:0;
 	text-align:center;
@@ -10,6 +14,7 @@ body, html {overflow-X:hidden;}
 	h2 {
 			text-transform:uppercase;
 			color:$colorWhite;
+			
 			height:60vh;
 			font-size:3.5rem;
 			line-height:60vh;
