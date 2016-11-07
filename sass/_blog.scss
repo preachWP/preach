@@ -300,8 +300,9 @@
       input[type='text'] {
          background: transparent;
          border: 2px solid gray;
-         padding: 4% 0;
+         padding: 4% 8%;
          font-size: 0.8rem;
+         color: white;
          border-radius: 100px;
       }
    }
@@ -368,6 +369,9 @@
       li:nth-child(even) {
          margin-bottom: 15px;
       }
+   }
+   input[type=text] {
+      max-width: 275px;
    }
 }
 @media (max-width: 450px) {

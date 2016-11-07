@@ -55,3 +55,15 @@ body {
 .overflow {
 	overflow: hidden;
 }
+
+*:focus {
+	outline: none;
+}
+
+div.wpcf7-response-output {
+	width: 1px;
+	position: absolute;
+	top: -1px;
+	opacity: 0;
+	z-index: -100;
+}

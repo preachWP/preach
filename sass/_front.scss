@@ -16,6 +16,8 @@
    align-items: center;
    background: $colorBlack;
    flex-direction: column;
+   text-transform: uppercase;
+   letter-spacing: 1px;
    li {
       padding: 10% 0;
       width: 100%;
@@ -49,12 +51,14 @@
    }
    p {
       font-style: italic;
-      font-size: 0.7rem;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
    }
    a {
       margin-top: 10%;
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
+      letter-spacing: 2px;
       color: $colorYellow;
    }
 }
@@ -80,6 +84,29 @@
    justify-content: center;
    flex-direction: column;
    background: rgba(0,0,0,0.4);
+}
+
+section.paragraph {
+   width: 100%;
+   max-width: 850px;
+   text-align: center;
+   margin: 7% auto;
+   p {
+      // color: blue;
+      line-height: 3;
+      margin: 0 15px;
+   }
+}
+
+section.home-video {
+   width: 100%;
+   max-width: 850px;
+   margin: 0 auto 10%;
+   font-size: 0;
+   text-align: center;
+   video {
+      width: calc(100% - 30px);
+   }
 }
 
 @media (max-width: 600px) {
